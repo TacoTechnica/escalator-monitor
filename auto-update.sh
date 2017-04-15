@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # User setup because it crashes if you dont do this..."
-env -i git config --global user.email "adrisj7@gmail.com"
-env -i git config --global user.name "adrisj7 PI"
+env -i git config user.email "adrisj7@gmail.com"
+env -i git config user.name "adrisj7 PI"
 
 while true; do
     env -i git fetch origin deploy
