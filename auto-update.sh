@@ -1,6 +1,6 @@
 #!/bin/bash
 while true; do
-    diff=$(git diff origin/deploy)
+    diff=$(git diff deploy)
     len=${#diff}
     echo "diff: $diff"
     echo "len: $len"
