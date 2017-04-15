@@ -4,7 +4,7 @@ while true; do
     len=${#diff}
     echo "diff: $diff"
     echo "len: $len"
-    if [ len != "0" ] ; then
+    if [ len eq "0" ] ; then
         echo "CHANGE DETECTED"
         git pull --no-edit origin deploy
     fi
