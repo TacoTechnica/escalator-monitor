@@ -1,6 +1,7 @@
 #!/bin/bash
 while true; do
-    diff=$(git diff deploy)
+    git fetch origin deploy
+    diff=$(git diff origin/deploy)
     len=${#diff}
     echo "length: $len"
     if [ "$len" -ne "0" ] ; then
