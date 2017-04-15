@@ -1,4 +1,5 @@
 #!/bin/bash
+
 while true; do
     git fetch origin deploy
     diff=$(git diff origin/deploy)
