@@ -1,6 +1,13 @@
 #!/bin/bash
 while true; do
-    git pull --no-edit origin deploy
+    diff=$(git diff origin/deploy)
+    len=${#diff}
+    echo "diff: $diff"
+    echo "len: $len"
+    if [ len != 0 ] ; then
+        echo "CHANGE DETECTED"
+        git pull --no-edit origin deploy
+    fi
     # There's gotta be a better way to do this
     #git fetch
     #if [ $(git rev-parse HEAD) != $(git rev-parse @{u}) ] ; then
