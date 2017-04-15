@@ -11,7 +11,7 @@ def loop():
         encoder.update_delta()
         state = encoder.get_direction()
         print "encoderState: %s" % state
-        update_state(state)
+        update_state("Test")#state)
 
 def update_state(on_off_state):
     #print "Server response before: %s" % (requests.get("http://" + SERVER_URL + "/getData").content)
